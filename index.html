@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K2 Company</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Rajdhani',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+nav a{
+    color:#aaa;
+    margin-left:25px;
+    text-decoration:none;
+    letter-spacing:2px;
+}
+nav a:hover{color:#fff}
+.logo{font-size:22px;font-weight:700}
+.logo span{color:red}
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:radial-gradient(circle at center,#400000 0%,#000 80%);
+}
+.hero h1{
+    font-size:90px;
+    letter-spacing:12px;
+}
+.hero h1 span{color:red}
+.hero p{
+    margin-top:20px;
+    color:#ccc;
+    letter-spacing:3px;
+}
+.btn{
+    margin:20px;
+    padding:15px 40px;
+    border:1px solid red;
+    color:#fff;
+    display:inline-block;
+    transition:.3s;
+}
+.btn:hover{
+    background:red;
+}
+section{
+    padding:120px 40px;
+}
+.title{
+    font-size:60px;
+    margin-bottom:60px;
+    text-align:center;
+}
+.red{color:red}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.card{
+    padding:40px;
+    border:1px solid rgba(255,0,0,0.2);
+    background:#0b0b0b;
+    transition:.4s;
+    opacity:0;
+    transform:translateY(60px);
+}
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+.card:hover{
+    border-color:red;
+    transform:translateY(-5px);
+}
+.tier{
+    text-align:center;
+    font-size:40px;
+    color:red;
+    margin-bottom:10px;
+}
+.footer{
+    padding:40px;
+    text-align:center;
+    background:#000;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">K<span>2</span></div>
+<div>
+<a href="#">ABOUT</a>
+<a href="#">SERVICES</a>
+<a href="#">HOW</a>
+<a href="#">CONTACT</a>
+</div>
+</nav>
+
+<div class="hero">
+<h1>K<span>2</span> COMPANY</h1>
+<p>LIVE CRYPTO & FOREX TRAFFIC</p>
+
+<div>
+<a class="btn">GET IN TOUCH</a>
+<a class="btn">OUR SERVICES</a>
+</div>
+</div>
+
+<section>
+<div class="title"><span class="red">TIER</span> 1·2·3</div>
+
+<div class="grid">
+<div class="card"><div class="tier">T1</div>US, UK, CA, AU, DE, FR</div>
+<div class="card"><div class="tier">T2</div>EU, LATAM, Middle East</div>
+<div class="card"><div class="tier">T3</div>SEA, Africa, CIS</div>
+</div>
+</section>
+
+<section>
+<div class="title">OUR CORE <span class="red">SERVICES</span></div>
+
+<div class="grid">
+<div class="card">Live Crypto Traffic</div>
+<div class="card">Forex Traffic</div>
+<div class="card">Global GEO Coverage</div>
+<div class="card">Campaign Optimization</div>
+<div class="card">Affiliate Partnership</div>
+<div class="card">Real-Time Reporting</div>
+</div>
+</section>
+
+<section>
+<div class="title">HOW IT <span class="red">WORKS</span></div>
+
+<div class="grid">
+<div class="card">01 Connect with us</div>
+<div class="card">02 Campaign setup</div>
+<div class="card">03 Traffic launch</div>
+</div>
+</section>
+
+<div class="hero">
+<h1 style="font-size:60px;">START WORKING WITH K2</h1>
+<p>@K2_LINO</p>
+</div>
+
+<div class="footer">
+K2 COMPANY — AFFILIATE NETWORK © 2024
+</div>
+
+<script>
+const items=document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+    const trigger=window.innerHeight*0.85;
+    items.forEach(el=>{
+        if(el.getBoundingClientRect().top<trigger){
+            el.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
